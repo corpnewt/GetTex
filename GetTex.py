@@ -22,7 +22,7 @@ class GetTex:
 
     def process(self):
         # Actually work through the downloading process, and copy the target file over
-        print("Attempting to download Configuration.tex from:")
+        print("\nAttempting to download Configuration.tex from:")
         print(self.tex_url)
         # Let's make sure the output folder exists - if not, make it.
         # If it does and is a file - throw an error.
@@ -55,6 +55,9 @@ class GetTex:
         if not file_path:
             print(" - File failed to download!")
             exit(1)
+        print("Saved to:")
+        print(file_path)
+        print("")
         print("Done.")
 
 if __name__ == '__main__':
